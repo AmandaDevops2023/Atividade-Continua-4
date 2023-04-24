@@ -8,7 +8,7 @@ mysql = MySQL()
 app.config['MYSQL_DATABASE_DB'] = 'mysql5'
 app.config['MYSQL_DATABASE_USER'] = 'root'
 app.config['MYSQL_DATABASE_PASSWORD'] = 'mudar123'
-app.config['MYSQL_DATABASE_HOST'] = '172.17.0.2'
+app.config['MYSQL_DATABASE_HOST'] = '172.18.0.46'
 mysql.init_app(app)
 
 @app.route('/')
