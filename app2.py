@@ -23,7 +23,7 @@ def gravar():
     if nome and email and senha:
         conn = mysql.connect()
         cursor = conn.cursor()
-        cursor.execute(f'insert into tbl_user (user_name, user_username, user_password) values ({nome}, {email}, {senha});')
+        cursor.execute(f"insert into tbl_user (user_name, user_username, user_password) values ('{nome}', '{email}', '{senha}');")
         conn.commit()
     return 'OK'
 
