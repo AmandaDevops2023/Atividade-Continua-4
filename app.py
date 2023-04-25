@@ -23,9 +23,9 @@ def gravar():
     if nome and email and senha:
         conn = mysql.connect()
         cursor = conn.cursor()
-        cursor.execute(f'insert into tbl_user (user_name, user_username, user_password) values ({nome}, {email}, {senha})')
+        cursor.execute("insert into tbl_user (user_name, user_username, user_password) values (%s, %s, %s);", (nome, email, senha))
         conn.commit()
     return 'OK'
 
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0')
+    app.run(debug=True, host='0.0.0.0', port=5000)
