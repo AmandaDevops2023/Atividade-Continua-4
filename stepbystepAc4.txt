@@ -1,0 +1,7 @@
+docker-compose.yml
+clona repositorio
+muda o host para db, na apliacao
+docker-compose up db -d // roda o banco de dados chamado db no docker-compose.yml
+cria banco
+docker-compose stop
+docker-compose up -d // roda todos os containers docker-compose.yml
